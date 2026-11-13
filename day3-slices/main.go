@@ -36,4 +36,12 @@ func main() {
 	fmt.Println(len(s), cap(s))
 	fmt.Println(len(t), cap(t))
 
+	ages := map[string]int{"Asha": 30}
+	ages["Ravi"] = 23
+	delete(ages, "Asha")
+	fmt.Println(len(ages))
+	v, ok := ages["Asha"]
+	fmt.Println(v, ok)
+
+	
 }
