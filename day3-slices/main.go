@@ -25,10 +25,15 @@ func main() {
 	b[0] = 100
 	fmt.Println(a) // [1 2 3]
 	fmt.Println(b) // [100 2 3 4]
+	fmt.Println(len(a), cap(a))
+	fmt.Println(len(b), cap(b))
 
 	s := make([]int, 3, 5) // [0 0 0], cap 5
 	t := append(s, 4)      // room, so same array
 	s[0] = 100
 	fmt.Println(s) // [100 0 0]  (a changed!)
 	fmt.Println(t) // [100 0 0 4] (b changed!)
+	fmt.Println(len(s), cap(s))
+	fmt.Println(len(t), cap(t))
+
 }
