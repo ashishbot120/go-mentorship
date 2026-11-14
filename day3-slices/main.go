@@ -2,18 +2,18 @@ package main
 
 import (
 	"fmt"
-	"strings"
-	"sort"
+	// "strings"
+	// "sort"
 )
 
-func wordCount(text string) map[string]int {
-	words := strings.Fields(text)
-	count := make(map[string]int)
-	for _, word := range words {
-		count[word]++
-	}
-	return count
-}
+// func wordCount(text string) map[string]int {
+// 	words := strings.Fields(text)
+// 	count := make(map[string]int)
+// 	for _, word := range words {
+// 		count[word]++
+// 	}
+// 	return count
+// }
 
 func main() {
 	// s := []int{1, 2, 3}
@@ -64,16 +64,23 @@ func main() {
 	// }
 	// fmt.Println("Total:", total)
 
-	text := "go is fun and go is fast and go is simple"
-	count := wordCount(text)
-	
-	sortedWords := make([]string, 0, len(count))
-	for word := range count {
-		sortedWords = append(sortedWords, word)
-	}
-	sort.Strings(sortedWords)
-	for _, word := range sortedWords {
-		fmt.Printf("%s: %d\n", word, count[word])
-	}
+	// text := "go is fun and go is fast and go is simple"
+	// count := wordCount(text)
+
+	// sortedWords := make([]string, 0, len(count))
+	// for word := range count {
+	// 	sortedWords = append(sortedWords, word)
+	// }
+	// sort.Strings(sortedWords)
+	// for _, word := range sortedWords {
+	// 	fmt.Printf("%s: %d\n", word, count[word])
+	// }
+
+	s := []int{1, 2, 3}
+	t := s
+	t[0] = 9
+	s = append(s, 4)
+	s[1] = 7
+	fmt.Println(s, t)
 
 }
